@@ -15,6 +15,7 @@ def load_html_files(html_folder_path):
     Load all HTML files from a folder and extract clean text
     """
     html_files = glob.glob(os.path.join(html_folder_path, "*.html"))
+    print(html_files)
     documents = []
 
     for file_path in html_files:
@@ -75,7 +76,7 @@ def create_qa_dataset(documents, qa_pairs):
 # ==== CONFIGURE YOUR DATA HERE ====
 
 # Path to folder containing your HTML files
-HTML_FOLDER = "./test-files"
+HTML_FOLDER = "html-files"
 
 # Your question-answer pairs
 # You need to create these for your HTML pages
@@ -147,7 +148,7 @@ if len(dataset) > 0:
     # Training arguments
     training_args = TrainingArguments(
         output_dir="./custom_html_qa_model",
-        evaluation_strategy="no",  # Change to "epoch" if you have validation data
+        #evaluation_strategy="no",  # Change to "epoch" if you have validation data
         per_device_train_batch_size=8,
         num_train_epochs=3,
         save_strategy="epoch",
@@ -171,8 +172,8 @@ if len(dataset) > 0:
     print("Don't forget to add your HTML files and Q&A pairs!")
 
     # Uncomment to start training
-    # trainer.train()
-    # trainer.save_model("./custom_html_qa_final_model")
+    trainer.train()
+    trainer.save_model("./custom_html_qa_final_model")
 else:
     print("\nNo training data created. Please add HTML files and Q&A pairs.")
 
