@@ -3,3 +3,13 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+#sample files
+tuning-models/html-files/*.html
+
+#temp files
+tuning-models/custom*
+tuning-models/logs*
+
+#intelliJ stuff
+.idea/*
