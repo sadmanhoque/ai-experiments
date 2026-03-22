@@ -11,6 +11,7 @@ rag/html_files/*.html
 #temp files
 tuning-models/custom*
 tuning-models/logs*
+rag/chroma_db/*
 
 #intelliJ stuff
 .idea/*
