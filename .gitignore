@@ -6,6 +6,7 @@
 
 #sample files
 tuning-models/html-files/*.html
+rag/html_files/*.html
 
 #temp files
 tuning-models/custom*
