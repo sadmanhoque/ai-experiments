@@ -5,8 +5,8 @@ from pydantic import BaseModel
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_community.llms import Ollama
-from langchain.chains import RetrievalQA
-from langchain.prompts import PromptTemplate
+from langchain_classic.chains import RetrievalQA
+from langchain_classic.prompts import PromptTemplate
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
