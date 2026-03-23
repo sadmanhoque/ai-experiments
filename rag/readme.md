@@ -16,7 +16,7 @@ Setup instructions:
 - Install from https://ollama.com
 - ollama pull llama3
 - pip install fastapi uvicorn langchain langchain-community langchain-classic chromadb sentence-transformers beautifulsoup4
-- python3 ingest.py  (first time only)
+- python3 ingest.py  (run this after adding new html files)
 - ollama serve (to start the local llm)
 - uvicorn server:app --reload  (to start up the webapp at localhost:8000)
 - 
